@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "target": "es6", // Specify ECMAScript target version
+    "module": "commonjs", // Module system to use
+    "strict": true, // Enable all strict type-checking options
+    "esModuleInterop": true, // Allow import/export interoperability
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "outDir": "./dist", // Output directory for compiled files
+    "rootDir": "./src" // Root directory of your source files
+  },
+  "include": ["src"], // Include only the 'src' directory
+  "exclude": ["node_modules", "dist"] // Exclude unnecessary folders
+}

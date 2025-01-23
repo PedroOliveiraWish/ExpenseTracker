@@ -1,0 +1,94 @@
+// Expenses.scss
+
+$primary-color: #4caf50; // Example primary color
+$secondary-color: #f44336; // Example secondary color
+$background-color: #f9f9f9; // Background color for the component
+$text-color: #333; // Text color
+
+.expenses {
+  background-color: $background-color;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+
+  h3 {
+    color: $primary-color;
+    margin-bottom: 15px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    overflow-y: auto;
+    max-height: 300px;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #e0e0e0;
+
+      &:last-child {
+        border-bottom: none; // Remove border for the last item
+      }
+
+      .expense {
+        display: flex;
+        align-items: center;
+      }
+
+      .icon {
+        font-size: 35px; // Adjust icon size
+        color: $primary-color; // Change icon color
+        margin-right: 10px; // Space between icon and content
+      }
+
+      .content {
+        flex: 1; // Allow content to take available space
+
+        .name {
+          font-weight: bold;
+          color: $text-color;
+        }
+
+        .type {
+          font-size: 14px;
+          color: #777; // Lighter color for type
+        }
+      }
+
+      .amount {
+        font-weight: bold;
+        color: $secondary-color; // Color for amount
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin-right: 5px; // Space between icon and amount
+        }
+      }
+
+      .date {
+        font-size: 12px;
+        color: #aaa; // Lighter color for date
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .expenses {
+    ul {
+      li {
+        flex-direction: column;
+        align-items: baseline;
+
+        .expense {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+// ExpenseTotal.scss
+
+$primary-color: #4caf50; // Example primary color
+$text-muted-color: #777; // Color for muted text
+$amount-color: #56f436; // Color for the total amount
+
+.expense-total {
+  background-color: #fff; // Background color for the component
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start; // Align items to the start
+  margin-bottom: 20px;
+
+  .text-muted {
+    color: $text-muted-color; // Muted text color
+    font-size: 14px; // Font size for muted text
+    margin-bottom: 5px; // Space below muted text
+  }
+
+  .total {
+    font-size: 24px; // Font size for total amount
+    font-weight: bold; // Bold text for emphasis
+    color: $amount-color; // Color for the total amount
+    display: flex; // Flex container for icon and amount
+    align-items: center; // Center align items
+
+    svg {
+      margin-right: 5px; // Space between icon and amount
+      font-size: 28px; // Adjust icon size
+      color: $primary-color; // Color for the icon
+    }
+  }
+}

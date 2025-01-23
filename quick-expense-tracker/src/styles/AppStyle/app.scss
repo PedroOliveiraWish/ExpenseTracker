@@ -1,0 +1,65 @@
+// App.scss
+
+$background-color: #b63f3f; // Background color for the app
+$container-padding: 20px; // Padding for the container
+$column-gap: 20px; // Gap between columns
+
+.app-container {
+  margin: 0 auto; // Center the component horizontally
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: $container-padding; // Padding around the container
+  min-height: 100vh; // Minimum height to cover the viewport
+}
+
+.app {
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: $container-padding; // Padding around the app
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.row {
+  margin: 0; // Remove default margin from rows
+  border-radius: 8px;
+}
+
+.col {
+  padding: $container-padding; // Padding for columns
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff; // White background for columns
+
+  &.breakdown {
+    border-radius: 8px 0 0 8px;
+    width: 100%;
+
+    h2 {
+      margin-bottom: 50px;
+    }
+  }
+
+  &.form {
+    border-radius: 0 8px 8px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .col {
+    margin-bottom: 20px; // Space between columns on small screens
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .app-container {
+    .app {
+      padding: 0;
+    }
+  }
+}
